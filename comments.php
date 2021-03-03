@@ -1,5 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
+<?php $this->comments()->to($comments); ?>
 
 <?php if($this->allow('comment')): ?>
 
@@ -33,37 +34,42 @@
 
             <!-- 评论列表 -->
             <h3 class="other-title"><span>已有 <?php $this->commentsNum() ?> 条评论</span></h3>
-            <ol class="comment-list">
-                <?php $this->comments()->to($comments); ?>
-                <?php while($comments->next()): ?>
-                    <li itemscope="" itemtype="http://schema.org/UserComments" id="comment-1126" class="comment-body comment-parent comment-odd">
-                        <!-- 评论者 -->
-                        <?php $a = 'https://cdn.v2ex.com/gravatar/' . md5(strtolower($comments->mail)) . '?s=80&d=retro';?>
-                        <div class="comment-author"  itemprop="creator" itemscope="" itemtype="http://schema.org/Person">
-                            <span itemprop="image">
-                                <img class="avatar" src="<?php echo $a ?>" alt="<?php echo $comments->author; ?>" width="32" height="32" />
-                            </span>
-                            <cite class="fn" itemprop="name"><?php $comments->author(); ?></cite>
-                        </div>
 
-                        <!-- 评论的元信息 -->
-                        <div class="comment-meta">
-                            <?php $comments->date('F jS, Y') ?>
-                        </div>
+            <?php if ($comments->have()) : ?>
+                <?php $comments->listComments(); ?>
+            <?php endif; ?>
 
-                        <!-- 评论的内容 -->
-                        <div class="comment-content" itemprop="commentText">
-                            <p><?php $comments->content(); ?></p>
-                        </div>
-
-                        <!-- 评论的回复 -->
-                        <div class="comment-reply">
-                            <a href="<?php $comments->responseUrl();  ?>" rel="nofollow" onclick="return TypechoComment.reply('<?php echo $comments->theId(); ?>', 1126);">回复</a>
-                            <?php echo $comments->theId(); ?>
-                        </div>
-                    </li>
-                <?php endwhile; ?>
-            </ol>
+<!--            <ol class="comment-list">-->
+<!--                --><?php //$this->comments()->to($comments); ?>
+<!--                --><?php //while($comments->next()): ?>
+<!--                    <li itemscope="" itemtype="http://schema.org/UserComments" id="comment-1126" class="comment-body comment-parent comment-odd">-->
+<!--                        <!-- 评论者 -->-->
+<!--                        --><?php //$a = 'https://cdn.v2ex.com/gravatar/' . md5(strtolower($comments->mail)) . '?s=80&d=retro';?>
+<!--                        <div class="comment-author"  itemprop="creator" itemscope="" itemtype="http://schema.org/Person">-->
+<!--                            <span itemprop="image">-->
+<!--                                <img class="avatar" src="--><?php //echo $a ?><!--" alt="--><?php //echo $comments->author; ?><!--" width="32" height="32" />-->
+<!--                            </span>-->
+<!--                            <cite class="fn" itemprop="name">--><?php //$comments->author(); ?><!--</cite>-->
+<!--                        </div>-->
+<!---->
+<!--                        <!-- 评论的元信息 -->-->
+<!--                        <div class="comment-meta">-->
+<!--                            --><?php //$comments->date('F jS, Y') ?>
+<!--                        </div>-->
+<!---->
+<!--                        <!-- 评论的内容 -->-->
+<!--                        <div class="comment-content" itemprop="commentText">-->
+<!--                            <p>--><?php //$comments->content(); ?><!--</p>-->
+<!--                        </div>-->
+<!---->
+<!--                        <!-- 评论的回复 -->-->
+<!--                        <div class="comment-reply">-->
+<!--                            <a href="--><?php //$comments->responseUrl();  ?><!--" rel="nofollow" onclick="return TypechoComment.reply('--><?php //echo $comments->theId(); ?>//', 1126);">回复</a>
+//                            <?php //echo $comments->theId(); ?>
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                --><?php //endwhile; ?>
+<!--            </ol>-->
 
         </div>
     </div>
