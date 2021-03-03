@@ -31,50 +31,50 @@
 </head>
 
 <body>
+    <div class="container">
+        <section id="header">
+                <div class="body_container">
+                    <div class="head">
+                        <div class="header-title">
+                            <h1><a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> </h1>
+                            <nav class="nav-menu">
+                                <ul class="site_nav">
+                                    <li><a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
+                                    <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+                                    <?php while($pages->next()): ?>
 
-    <section id="header">
-        <div class="body_container">
-            <div class="head">
-                <div class="header-title">
-                    <h1><a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> </h1>
-                    <nav class="nav-menu">
-                        <ul class="site_nav">
-                            <li><a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
-                            <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-                            <?php while($pages->next()): ?>
+                                        <li><a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
 
-                                <li><a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
-
-                            <?php endwhile; ?>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="header-fix">
-        <div class="body_container">
-            <div class="head">
-                <div class="header-title">
-                    <h1><a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> </h1>
-                    <div class="fix-value hidden-if-md">
-                        <span> &#55357;&#56547; <em id="hitokoto">:D 获取中...</em></span>
+                                    <?php endwhile; ?>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                    <script src="https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto" defer=""></script>
-                    <nav class="nav-menu">
-                        <ul class="site_nav">
-                            <li><a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
-                            <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-                            <?php while($pages->next()): ?>
-
-                                <li><a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
-
-                            <?php endwhile; ?>
-                        </ul>
-                    </nav>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+
+            <section id="header-fix">
+                <div class="body_container">
+                    <div class="head">
+                        <div class="header-title">
+                            <h1><a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> </h1>
+                            <div class="fix-value hidden-if-md">
+                                <span> &#55357;&#56547; <em id="hitokoto">:D 获取中...</em></span>
+                            </div>
+                            <script src="https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto" defer=""></script>
+                            <nav class="nav-menu">
+                                <ul class="site_nav">
+                                    <li><a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
+                                    <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+                                    <?php while($pages->next()): ?>
+
+                                        <li><a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
+
+                                    <?php endwhile; ?>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
 

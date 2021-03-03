@@ -45,11 +45,9 @@
                         </div>
                     </div>
 
-                    <div class="pure-u-1 pure-u-md-7-8 pure-u-lg-3-4 post-body">
-                        <div id="comments" class="doc_comments">
+                    <?php $this->need('comments.php'); ?>
 
-                        </div>
-                    </div>
+
 
 
                 </div>
