@@ -35,6 +35,7 @@
 <script src="https://seahi.me/usr/themes/XuanMing/static/baguetteBox.js"></script>
 <script src="https://seahi.me/usr/themes/XuanMing/static/script.js"></script>
 <script> window.addEventListener('load', function() { baguetteBox.run('body',{ overlayBackgroundColor:'hsla(0,0%,100%,.92)', noScrollbars: true }) }); </script>
+<script async defer data-website-id="3cc83bbb-3db1-423a-8011-22b726ae464a" src="https://umami.seahi.me/umami.js"></script>
 
 </body>
 </html>
