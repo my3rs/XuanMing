@@ -1,5 +1,3 @@
-console.log(" %c MrJu.cn %c https://mrju.cn/about/  你在审查点什么东东呢？好给我说下撒~ ","color: #fadfa3; background: #ff5722; padding:5px;","background: #1c2b36; padding:5px;");
-
 window.addEventListener('load', function() {
     if (document.querySelector('#app')) {return false};
 
