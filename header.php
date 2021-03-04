@@ -71,7 +71,7 @@
                             <?php if ($this->is('index')): ?>
                                 <h1><a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> </h1>
                                 <div class="fix-value hidden-if-md">
-                                    <span> &#55357;&#56547; <em id="hitokoto">:D 获取中...</em></span>
+                                    <span><em id="hitokoto">:D 获取中...</em></span>
                                 </div>
                                 <script src="https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto" defer=""></script>
                             <?php endif; ?>
