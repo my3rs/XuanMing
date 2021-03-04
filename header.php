@@ -31,7 +31,9 @@
 </head>
 
 <body>
-    <div class="container">
+<div class="dark"></div>
+<script type="text/javascript"> var model = localStorage.getItem("yone_color_style"); if (model == "dark") { document.querySelector("body").setAttribute("theme","dark"); document.querySelector("body").querySelector(".dark").style.display = "block"; } </script>
+<div class="container">
         <section id="header">
                 <div class="body_container">
                     <div class="head">
@@ -62,6 +64,7 @@
                                 <h1 class="post-fix-left-logo"> <a id="logo" href="<?php $this->options->siteUrl() ?>"><?php $this->options->title() ?></a> </h1>
                                 <h3 class="hidden-if-lg"><?php $this->title() ?></h3>
                                 <div class="post-fix-value hidden-if-md">
+                                    <!-- TODO: 可以直接获取文章的评论链接么？ -->
                                     <span class="post-commentnums"><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('%d 条评论'); ?></a></span>
                                     <span class="post-tags"><?php $this->tags(',', true, 'none'); ?></span>
                                 </div>
