@@ -75,6 +75,4 @@
     </div>
 <?php endif; ?>
 
-<?php $this->need('footer.php'); ?>
-
 
