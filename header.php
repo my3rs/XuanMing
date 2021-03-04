@@ -33,6 +33,7 @@
 <body>
 <div class="dark"></div>
 <script type="text/javascript"> var model = localStorage.getItem("yone_color_style"); if (model == "dark") { document.querySelector("body").setAttribute("theme","dark"); document.querySelector("body").querySelector(".dark").style.display = "block"; } </script>
+
 <div class="container">
         <section id="header">
                 <div class="body_container">
