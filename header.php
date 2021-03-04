@@ -57,11 +57,25 @@
                 <div class="body_container">
                     <div class="head">
                         <div class="header-title">
-                            <h1><a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> </h1>
-                            <div class="fix-value hidden-if-md">
-                                <span> &#55357;&#56547; <em id="hitokoto">:D 获取中...</em></span>
-                            </div>
-                            <script src="https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto" defer=""></script>
+                            <!-- 如果是文章页面 -->
+                            <?php if ($this->is('post')): ?>
+                                <h1 class="post-fix-left-logo"> <a id="logo" href="<?php $this->options->siteUrl() ?>"><?php $this->options->title() ?></a> </h1>
+                                <h3 class="hidden-if-lg"><?php $this->title() ?></h3>
+                                <div class="post-fix-value hidden-if-md">
+                                    <span class="post-commentnums"><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('%d 条评论'); ?></a></span>
+                                    <span class="post-tags"><?php $this->tags(',', true, 'none'); ?></span>
+                                </div>
+                            <?php endif; ?>
+
+                            <!-- 如果是独立页面 -->
+                            <?php if ($this->is('index')): ?>
+                                <h1><a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> </h1>
+                                <div class="fix-value hidden-if-md">
+                                    <span> &#55357;&#56547; <em id="hitokoto">:D 获取中...</em></span>
+                                </div>
+                                <script src="https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto" defer=""></script>
+                            <?php endif; ?>
+
                             <nav class="nav-menu">
                                 <ul class="site_nav">
                                     <li><a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
