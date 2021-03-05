@@ -30,7 +30,7 @@
         <a class="sosearch search-form-input" href="javascript:;" title="搜索"><i class="antd-search"></i><span class="tooltiptext">搜索</span></a>
         <a class="socolor" href="javascript:;" title="切换皮肤"><i class="antd-skin"></i><span class="tooltiptext">切换皮肤</span></a>
     </section>
-</div>
+</div> <!-- end container -->
 
 <script src="https://seahi.me/usr/themes/XuanMing/static/baguetteBox.js"></script>
 <script src="https://seahi.me/usr/themes/XuanMing/static/script.js"></script>
