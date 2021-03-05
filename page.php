@@ -16,7 +16,12 @@
                         </div>
 
                     </div>
+                    
+                    <?php $this->need('comments.php'); ?>
+
                 </div>
+
+
 
 
             </div>

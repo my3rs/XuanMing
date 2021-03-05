@@ -3,9 +3,12 @@
 <?php $this->comments()->to($comments); ?>
 
 <?php if($this->allow('comment')): ?>
-
+    <?php if ($this->is('post')): ?>
     <div class="pure-u-1 pure-u-md-7-8 pure-u-lg-3-4 post-body">
+    <?php endif; ?>
+
         <div id="comments" class="doc_comments">
+            <!-- 评论框 -->
             <div id="respond-post-70" class="respond">
                 <div class="cancel-comment-reply">
                     <a id="cancel-comment-reply-link" href="https://mrju.cn/70.html#respond-post-70" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>
@@ -70,8 +73,9 @@
 <!--                    </li>-->
 <!--                --><?php //endwhile; ?>
 <!--            </ol>-->
-
+        <?php if ($this->is('post')): ?>
         </div>
+        <?php endif; ?>
     </div>
 <?php endif; ?>
 
