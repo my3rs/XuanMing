@@ -21,7 +21,6 @@
     </title>
 
     <!-- 使用url函数转换相关路径 -->
-    <script type="text/javascript" src="<?php $this->options->themeUrl('static/jquery.min.js'); ?>"></script>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('static/style.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('static/custom.css'); ?>">
 
