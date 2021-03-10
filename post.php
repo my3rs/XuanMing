@@ -24,7 +24,7 @@
                         <div class="js-content hidden-if-lg">
                             <?php $this->related(5)->to($relatedPosts); ?>
                             <div class="title--right sulli">
-                                More Posts
+                                更多内容
                             </div>
                             <?php while ($relatedPosts->next()): ?>
                             <div class="elevatePost-item">
@@ -36,18 +36,11 @@
                             <?php endwhile; ?>
 
 
-                            <div class="elevatePost-item">
-                                <h4><a class="link" href="https://mrju.cn/2019nationalday.html">国庆节的那些事儿</a></h4>
-                                <div class="meta JiEun">
-                                    October 10, 2019
-                                </div>
-                            </div>
+
                         </div>
                     </div>
 
                     <?php $this->need('comments.php'); ?>
-
-
 
 
                 </div>
