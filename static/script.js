@@ -38,7 +38,7 @@ window.addEventListener('load', function() {
 
 (function postArticle() {
     // 文章目录
-    var postContentH3 = document.querySelectorAll(".post-content h3");
+    var postContentH2 = document.querySelectorAll(".post-content h2");
     var postArticles = document.querySelector(".post-articles");
     if (!postArticles) {return false};
     var tocDiv = document.createElement("div");
@@ -46,14 +46,14 @@ window.addEventListener('load', function() {
     postArticles.appendChild(tocDiv);
     var ul = document.createElement("ul");
     tocDiv.appendChild(ul);
-    for (var i = 0; i < postContentH3.length; i++) {
+    for (var i = 0; i < postContentH2.length; i++) {
         var li = document.createElement("li");
         ul.appendChild(li);
         var a = document.createElement("a");
         a.href = "#cl-" + (i + 1);
-        a.innerHTML = postContentH3[i].innerHTML;
+        a.innerHTML = postContentH2[i].innerHTML;
         li.appendChild(a);
-        postContentH3[i].setAttribute("id","cl-" + (i + 1));
+        postContentH2[i].setAttribute("id","cl-" + (i + 1));
     }
 
     window.addEventListener("scroll", function () {
