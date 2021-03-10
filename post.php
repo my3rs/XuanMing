@@ -30,7 +30,7 @@
                             <div class="elevatePost-item">
                                 <h4><a class="link" href="<?php $relatedPosts->permalink(); ?>"><?php $relatedPosts->title() ?></a></h4>
                                 <div class="meta JiEun">
-                                    <time datetime="2020-12-15T09:55:00+08:00" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time>
+                                    <time datetime="2020-12-15T09:55:00+08:00" itemprop="datePublished"><?php $this->date('Y-m-d'); ?></time>
                                 </div>
                             </div>
                             <?php endwhile; ?>

@@ -32,7 +32,7 @@ $this->need('header.php');
                     <div class="pure-u-1 pure-u-md-1-4">
                         <div class="post-meta">
                             <ul>
-                                <li><time datetime="2020-12-15T09:55:00+08:00" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time></li>
+                                <li><time datetime="2020-12-15T09:55:00+08:00" itemprop="datePublished"><?php $this->date('Y年m月d日'); ?></time></li>
                                 <li><span><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></span></li>
                             </ul>
                         </div>
