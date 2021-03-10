@@ -37,10 +37,17 @@ window.addEventListener('load', function() {
 });
 
 (function postArticle() {
+    var tocTitleDiv = document.createElement("div");
+    tocTitleDiv.className = "title--right sulli";
+    tocTitleDiv.innerText = "目录"
     // 文章目录
-    var postContentH2 = document.querySelectorAll(".post-content h2");
+
     var postArticles = document.querySelector(".post-articles");
-    if (!postArticles) {return false};
+    if (!postArticles) { return false; }
+    var postContentH2 = document.querySelectorAll(".post-content h2");
+    if (postContentH2.length) {
+        postArticles.appendChild(tocTitleDiv);
+    }
     var tocDiv = document.createElement("div");
     tocDiv.className = "toc";
     postArticles.appendChild(tocDiv);
