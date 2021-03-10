@@ -42,7 +42,9 @@
         </div>
 
         <div class="comment-reply">
-            <a href="<?php $comments->responseUrl(); ?>" rel="nofollow" onclick="return TypechoComment.reply('?php $comments->theId(); ?>', 1112);">回复</a>
+
+            <a href="<?php $comments->responseUrl(); ?>" rel="nofollow" onclick="return TypechoComment.reply('<?php $comments->theId(); ?>', <?php echo $comments->coid; ?>);">回复</a>
+
         </div>
 
         <?php if ($comments->children) { ?>
@@ -64,13 +66,16 @@
 
     <div id="comments" class="doc_comments">
         <!-- 评论框 -->
-        <div id="respond-post-70" class="respond">
+        <div id="respond-post-<?php echo $this->cid; ?>" class="respond">
+            <div class="cancel-comment-reply">
+                <a id="cancel-comment-reply-link" href="<?php echo $this->permalink() ?>#respond-post-<?php echo $this->cid; ?>" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>
+            </div>
 
             <div id="response">
                 发表评论
             </div>
             <!-- 输入表单开始 -->
-            <form id="new_comment_form" method="post" action="<?php $this->commentUrl() ?>" _lpchecked="1">
+            <form id="new_comment_form" method="post" action="<?php $this->commentUrl() ?>">
                 <div class="new_comment">
                     <!-- 输入要回复的内容 -->
                     <textarea name="text" rows="2" class="textarea_box" style="height: auto;" placeholder="人生在世，难免会写点错别字，没事儿~" required="required"><?php $this->remember('text'); ?></textarea>
@@ -91,11 +96,10 @@
                     <div class="comment_triggered" style="display: block;">
                         <div class="input_body">
                             <ul class="ident">
-                                <li><input type="text" name="author" placeholder="昵称*" value="<?php $this->remember('author'); ?>" required="required" /></li>
-                                <li><input type="mail" name="mail" placeholder="邮件*" value="<?php $this->remember('mail'); ?>" required="required" /></li>
-                                <li><input type="text" name="url" placeholder="网址" value="<?php $this->remember('url'); ?>" /></li>
+                                <li><input type="text" name="author" class="text" placeholder="昵称*" value="<?php $this->remember('author'); ?>" required="required" /></li>
+                                <li><input type="text" name="mail" class="text" placeholder="邮件*" value="<?php $this->remember('mail'); ?>" required="required" /></li>
+                                <li><input type="text" name="url" class="text" placeholder="网址" value="<?php $this->remember('url'); ?>" /></li>
                             </ul>
-                            <input type="submit" value="提交评论" class="comment_submit_button c_button" />
                         </div>
                     </div>
                 <?php endif; ?>
