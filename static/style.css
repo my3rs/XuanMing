@@ -49,7 +49,7 @@ ol.page-navigator span{display:none}
 .paginator a:hover{background-color:#ddd}
 .paginator a.current{background-color:#fff}
 #footer{margin-top:-1px;line-height:1.5;background:#fff;border-top:1px solid #eee;}
-#footer .foot{font-size:.9em;line-height:40px;overflow:hidden;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIBAMAAACnw650AAAAHlBMVEVHcEzeKRDeKRDeKRDeKRD/3gL1pQblTw3sdwr6wQTLdZ7ZAAAABHRSTlMAx2AgeeCtMAAAANpJREFUSMftlTEOwjAMRY24AAIugMQB4AiglIQdV+1OC907tHtCL0ALx0VpWBgSm6VD1b9kebL8bSsfYNLg2oiglpbZC0IrgLkgtYMZDS1gS0NHWNPQAQRDP1DJgPILAzIxDcn8xqgkdRhSmuHudHVvJQNQ9DUWvQOQSVxXWRKA2tS957sPenQFYlfYAShv4wp76bC72jIvagQZYkzOySA6W4pRSdaNH8LEYA+1/jnJtJRtf3Hm6YXs5tz2dEOe71hv/A93EzRCiPXZs2KDFUCsKGOFIi9eJw2rD7sM9t3RZChEAAAAAElFTkSuQmCC);background-position:100%;background-repeat:no-repeat;background-size:28px auto;padding-right:36px}
+#footer .foot{font-size:.9em;line-height:40px;overflow:hidden;}
 #footer .foot .foot-left{float:left;}
 #footer .foot .foot-right{float:right}
 #footer .foot a:hover{color:#333}
