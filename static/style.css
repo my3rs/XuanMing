@@ -202,7 +202,7 @@ nav.comments-navigator .prev:after{content:"·";position:relative;right:-10px}
 /*博客logo字体*/
 @font-face{font-family:charlemagne;font-style:normal;font-weight:400;src:local('charlemagne'),local('charlemagne'),url(charlemagne.woff) format('woff')}
 a#logo{font:400 28px charlemagne,'Helvetica Neue',Helvetica,Arial;text-transform:capitalize;position:relative;color:#1a2a3a;}
-a#logo:after{display:block;content:"";background-image:url(//static.mrju.cn/images/ynlyxy-80.png);background-position:right;background-size:auto 100%;background-repeat:no-repeat;width:162px;height:40px;position:absolute;bottom:0;left:0;/*-webkit-transform:rotate(30deg);-moz-transform:rotate(30deg);transform:rotateY(180deg);*/}
+a#logo:after{display:block;content:"";background-image:url(//dev.seadev.cn/XuanMing/ynlyxy-80.webp);background-position:right;background-size:auto 100%;background-repeat:no-repeat;width:162px;height:40px;position:absolute;bottom:0;left:0;/*-webkit-transform:rotate(30deg);-moz-transform:rotate(30deg);transform:rotateY(180deg);*/}
 
 /*文章归档页面*/
 #archives-box ul{padding:0;list-style:none}
@@ -324,15 +324,15 @@ section#header-fix a:after{display:none}
 .setting-tools a{font-size:1rem;text-align:center;line-height:36px;width:36px;height:36px;display:block;cursor:pointer;background:#fff;position:relative;}
 .setting-tools div{display:none;position:absolute;width:200px;right:100%;background:#fff;box-shadow:0 0 2px rgba(0,0,0,.1);}
 .setting-tools i:before{display:block;content:" ";background-size:20px 20px;height:20px;width:20px;margin:0 auto;position:relative;top:8px;background-repeat:no-repeat;}
-.antd-top:before{background-image:url(https://static.mrju.cn/images/top.svg);}
-.antd-home:before{background-image:url(https://static.mrju.cn/images/home.svg);}
-.antd-search:before{background-image:url(https://static.mrju.cn/images/search.svg);}
-.antd-skin:before{background-image:url(https://static.mrju.cn/images/skin.svg);}
-.antd-center:before{background-image:url(https://static.mrju.cn/images/center.svg);}
-.antd-aim:before{background-image:url(https://static.mrju.cn/images/aim.svg);}
-.antd-prev:before{background-image:url(https://static.mrju.cn/images/cp-prev.svg);}
-.antd-next:before{background-image:url(https://static.mrju.cn/images/cp-next.svg);}
-.antd-play:before{background-image:url(https://static.mrju.cn/images/cp-playout.svg);}
+.antd-top:before{background-image:url(https://dev.seadev.cn/XuanMing/top.svg);}
+.antd-home:before{background-image:url(https://dev.seadev.cn/XuanMing/home.svg);}
+.antd-search:before{background-image:url(https://dev.seadev.cn/XuanMing/search.svg);}
+.antd-skin:before{background-image:url(https://dev.seadev.cn/XuanMing/skin.svg);}
+.antd-center:before{background-image:url(https://dev.seadev.cn/XuanMing/center.svg);}
+.antd-aim:before{background-image:url(https://dev.seadev.cn/XuanMing/aim.svg);}
+.antd-prev:before{background-image:url(https://dev.seadev.cn/XuanMing/cp-prev.svg);}
+.antd-next:before{background-image:url(https://dev.seadev.cn/XuanMing/cp-next.svg);}
+.antd-play:before{background-image:url(https://dev.seadev.cn/XuanMing/cp-playout.svg);}
 .setting-tools .antd-next:before,.setting-tools .antd-prev:before{-webkit-transform:rotate(90deg);}
 .post-center{margin:0 auto;animation:right .5s;}
 .post-sidebar{display:none;animation:right .5s;}
@@ -341,7 +341,7 @@ section#header-fix a:after{display:none}
 .ins-search-container{box-shadow:0 8px 20px rgba(170,170,170,.8)!important;}
 .ins-search.show .ins-search-overlay,.ins-section-wrapper{background:rgba(255,255,255,.92)!important}
 .ins-section-wrapper:after{content:"无相关内容~";font-size:38px;color:#dadada;position:absolute;top:50%;text-align:center;width:100%;margin-top:-150px}
-.ins-search-overlay:after{position:absolute;top:5%;width:100%;content:"MRJU";font:400 28px charlemagne,'Helvetica Neue',Helvetica,Arial;text-align:center}
+.ins-search-overlay:after{position:absolute;top:5%;width:100%;content:"seaHi";font:400 28px charlemagne,'Helvetica Neue',Helvetica,Arial;text-align:center}
 .ins-section-container{z-index:1}
 
 .dark{position:fixed;top:0;left:0;width:100%;height:100%;z-index:88888888;pointer-events:none;mix-blend-mode:multiply;transition:opacity .1s ease 0s;opacity:.3;background:#f0c239;display:none;}
